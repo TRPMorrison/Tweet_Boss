@@ -17,9 +17,12 @@
   // Add Tweet Function
   var addTweet = function (e) {
 
-    e.preventDefault();
+    e.preventDefault(); // Prevent Default Handler
 
-    console.log('Adding Tweet');
+    var message = tweetInput.val();
+
+    console.log(message);
+    
 
   };
 
