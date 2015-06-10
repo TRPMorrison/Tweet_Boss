@@ -2,20 +2,28 @@
   
   'use strict';
 
+  // Page Elements (Constants)
+  var tweetInput = $('#tweetInput'),
+      tweetForm = $('#addTweet');
+
+
+  // Tweet Constructor (Blueprint)
   var Tweet = function (message) {
     this.message = message;
     this.timestamp = Date.now();
   };
 
-  $('#addToServer').on('click', function (e) {
+
+  // Add Tweet Function
+  var addTweet = function (e) {
 
     e.preventDefault();
 
-    var t = new Tweet('Politics is Hard');
+    console.log('Adding Tweet');
 
-    $.post('http://tiy-515.herokuapp.com/collections/instructor', t);
+  };
 
-
-  }); 
+  // Submit Handler
+  tweetForm.on('submit', addTweet);
 
 }());
